@@ -2,7 +2,6 @@ package main
 
 import (
 	"flag"
-	"fmt"
 	"html/template"
 	"io/ioutil"
 	"os"
@@ -41,8 +40,6 @@ func main() {
 				if len(subKv[1]) == 0 {
 					panic("bad type given for value: " + kv[0])
 				}
-
-				fmt.Printf("value type: %s\n", subKv[1])
 
 				switch subKv[1] {
 				case "int32":
@@ -93,8 +90,6 @@ func main() {
 			}
 		}
 	}
-
-	fmt.Printf("%+v\n\n", vars)
 
 	tmpl, err := template.New("x").Parse(string(raw))
 	if err != nil {
