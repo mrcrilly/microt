@@ -2,11 +2,11 @@ package main
 
 import (
 	"flag"
-	"html/template"
 	"io/ioutil"
 	"os"
 	"strconv"
 	"strings"
+	"text/template"
 )
 
 func main() {
